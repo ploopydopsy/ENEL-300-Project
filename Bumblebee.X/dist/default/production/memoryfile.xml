@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="dist/default/production/Bumblebee.X.production.elf">                 
+    <memory name="program">              
+      <units>bytes</units>                 
+      <length>131072</length>                 
+      <used>1866</used>                     
+      <free>129206</free>                     
+    </memory>                              
+    <memory name="data">                 
+      <units>bytes</units>                 
+      <length>16384</length>                 
+      <used>17</used>                     
+      <free>16367</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 
