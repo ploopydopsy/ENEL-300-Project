@@ -67,7 +67,7 @@ uint16_t apply_moving_average(uint16_t new_distance);
 void display_distance(uint16_t distance);
 
 // Timer overflow interrupt
-ISR(TCB0_INT_vect) {
+ISR(TCB0_INT_vect) {   
     // This interrupt will trigger if the echo is too long
     // Reset everything for the next measurement
     TCB0.INTFLAGS = TCB_OVF_bm; // Clear the interrupt flag
