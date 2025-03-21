@@ -1,4 +1,5 @@
-build/default/production/main.o.d build/default/production/main.o: main.c \
+build/default/production/newavr-main.o.d \
+ build/default/production/newavr-main.o: newavr-main.c \
  /Applications/microchip/xc8/v3.00/avr/avr/include/avr/io.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/avr/sfr_defs.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/inttypes.h \
