@@ -6,27 +6,18 @@
 #include <stdint.h>
 
 // TM1637 display pins
-#define TM1637_CLK_PIN 2  // PA2
-#define TM1637_DIO_PIN 3  // PA3
+#define TM1637_CLK_PIN 0  // PC0
+#define TM1637_DIO_PIN 3  // PA3 (keeping this one as is)
 
-// HC?SR04 sensor pins
-#define HC_SR04_TRIG_PIN 0  // PA0
-#define HC_SR04_ECHO_PIN 1  // PA1
+// HC-SR04 sensor pins
+#define HC_SR04_TRIG_PIN 1  // PC1
+#define HC_SR04_ECHO_PIN 2  // PC2
 
 // Display settings
 #define TM1637_BRIGHTNESS 0x0F  // Maximum brightness (0x08 to 0x0F)
 #define TM1637_CMD_SET_DATA 0x40
 #define TM1637_CMD_SET_ADDR 0xC0
 #define TM1637_CMD_DISPLAY_CTRL 0x88  // Display ON with brightness
-
-// Joystick Pins
-#define JOY_X_PIN 4   // PA4 (ADC)
-#define JOY_Y_PIN 5   // PA5 (ADC)
-#define JOY_SW_PIN 6  // PA6 (Digital Input)
-
-// Servo Pin
-#define SERVO_PIN 7  // PA7 (PWM)
-
 
 // 7-segment lookup for digits 0-9
 const uint8_t digitToSegment[10] = {
@@ -75,11 +66,11 @@ ISR(TCB0_INT_vect) {
 }
 
 // Pin change interrupt for echo pin
-ISR(PORTA_PORT_vect) {
+ISR(PORTC_PORT_vect) {
     // Check if it's the echo pin
-    if (PORTA.INTFLAGS & (1 << HC_SR04_ECHO_PIN)) {
+    if (PORTC.INTFLAGS & (1 << HC_SR04_ECHO_PIN)) {
         // If echo pin is high, start the timer
-        if (PORTA.IN & (1 << HC_SR04_ECHO_PIN)) {
+        if (PORTC.IN & (1 << HC_SR04_ECHO_PIN)) {
             TCB0.CNT = 0; // Reset counter
             echo_start = 0;
             TCB0.CTRLA |= TCB_ENABLE_bm; // Start timer
@@ -90,44 +81,8 @@ ISR(PORTA_PORT_vect) {
             TCB0.CTRLA &= ~TCB_ENABLE_bm; // Stop timer
             echo_done = 1;
         }
-        PORTA.INTFLAGS = (1 << HC_SR04_ECHO_PIN); // Clear the interrupt flag
+        PORTC.INTFLAGS = (1 << HC_SR04_ECHO_PIN); // Clear the interrupt flag
     }
-}
-
-// ADC Initialization
-void adc_init() {
-    VREF.ADC0REF = VREF_REFSEL_VDD_gc;  // Use VDD (5V) as ADC reference
-    ADC0.CTRLA |= ADC_ENABLE_bm;        // Enable ADC
-    ADC0.CTRLC = ADC_PRESC_DIV4_gc;     // Set ADC prescaler to divide by 4
-}
-
-// Read Joystick ADC Value (0-1023)
-uint16_t adc_read(uint8_t channel) {
-    ADC0.MUXPOS = channel;         // Select ADC channel
-    ADC0.COMMAND = ADC_STCONV_bm;  // Start conversion
-    while (!(ADC0.INTFLAGS & ADC_RESRDY_bm));  // Wait for conversion
-    ADC0.INTFLAGS = ADC_RESRDY_bm;  // Clear flag
-    return ADC0.RES;
-}
-
-// Map ADC (0-1023) to Servo Angle (0-180)
-uint16_t map_to_angle(uint16_t value) {
-    return (value * 180) / 1023;
-}
-
-// Servo PWM Setup
-void pwm_init() {
-    PORTA.DIRSET = (1 << SERVO_PIN);   // Set PA7 as output
-    TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV16_gc | TCA_SINGLE_ENABLE_bm;  // Enable timer with prescaler
-    TCA0.SINGLE.CTRLB = TCA_SINGLE_WGMODE_SINGLESLOPE_gc;  // Single-slope PWM mode
-    TCA0.SINGLE.PER = 20000;  // 20ms period for 50Hz PWM
-    TCA0.SINGLE.CTRLB |= TCA_SINGLE_CMP0EN_bm;  // Enable PWM on PA7
-}
-
-// Set Servo Position (Pulse Width 1ms to 2ms)
-void set_servo_angle(uint16_t angle) {
-    uint16_t pulse_width = 1000 + ((angle * 1000) / 180);  // Map 0°-180° to 1000-2000us
-    TCA0.SINGLE.CMP0 = pulse_width;  // Set PWM pulse width
 }
 
 int main(void) {
@@ -135,24 +90,20 @@ int main(void) {
     CLKCTRL.MCLKCTRLA = CLKCTRL_CLKSEL_OSCHF_gc;
     CLKCTRL.MCLKCTRLB = CLKCTRL_PDIV_4X_gc | CLKCTRL_PEN_bm;
     
-    // Setup TM1637 pins (PA2, PA3) as outputs and set high
-    PORTA.DIRSET = (1 << TM1637_CLK_PIN) | (1 << TM1637_DIO_PIN);
-    PORTA.OUTSET = (1 << TM1637_CLK_PIN) | (1 << TM1637_DIO_PIN);
+    // Setup TM1637 pins (PC0 for CLK, PA3 for DIO) as outputs and set high
+    PORTC.DIRSET = (1 << TM1637_CLK_PIN);
+    PORTA.DIRSET = (1 << TM1637_DIO_PIN);
+    PORTC.OUTSET = (1 << TM1637_CLK_PIN);
+    PORTA.OUTSET = (1 << TM1637_DIO_PIN);
     
-    // Setup HC?SR04 sensor pins: TRIG (PA0) as output, ECHO (PA1) as input
-    PORTA.DIRSET = (1 << HC_SR04_TRIG_PIN);
-    PORTA.DIRCLR = (1 << HC_SR04_ECHO_PIN);
-    PORTA.OUTCLR = (1 << HC_SR04_TRIG_PIN); // Ensure TRIG is initially low
+    // Setup HC-SR04 sensor pins: TRIG (PC1) as output, ECHO (PC2) as input
+    PORTC.DIRSET = (1 << HC_SR04_TRIG_PIN);
+    PORTC.DIRCLR = (1 << HC_SR04_ECHO_PIN);
+    PORTC.OUTCLR = (1 << HC_SR04_TRIG_PIN); // Ensure TRIG is initially low
     
     // Configure pin interrupt for ECHO pin
-    PORTA.PIN1CTRL = PORT_PULLUPEN_bm | PORT_ISC_BOTHEDGES_gc; // Pull-up enabled, interrupt on both edges
+    PORTC.PIN2CTRL = PORT_PULLUPEN_bm | PORT_ISC_BOTHEDGES_gc; // Pull-up enabled, interrupt on both edges
     
-    // Initialize Joystick ADC
-    adc_init();
-    
-    // Initialize Servo PWM
-    pwm_init();
-
     // Initialize timer for echo measurement
     timer_init();
     
@@ -171,8 +122,6 @@ int main(void) {
     display_distance(0);
     
     while(1) {
-        // === HC-SR04 Distance Measurement ===
-        
         // Trigger a new measurement
         trigger_measurement();
         
@@ -191,24 +140,12 @@ int main(void) {
         // Reset for next measurement
         echo_done = 0;
         
-        // === Joystick and Servo Control ===
-
-        uint16_t joy_x = adc_read(JOY_X_PIN);  // Read Joystick X
-        uint16_t angle = map_to_angle(joy_x);  // Convert to angle
-        set_servo_angle(angle);  // Move Servo
-
-        // Check if joystick button is pressed
-        if (!(PORTA.IN & (1 << JOY_SW_PIN))) {
-            set_servo_angle(90);  // Move Servo to Center (90°)
-        }
-
         // Delay between measurements (100-200ms is typical for HC-SR04)
         _delay_ms(100);
     }
     
     return 0;
 }
-
 
 void timer_init(void) {
     // Configure TCB0 for microsecond timing
@@ -312,20 +249,20 @@ void tm1637_display(uint8_t segments[]) {
 
 void tm1637_start(void) {
     PORTA.OUTSET = (1 << TM1637_DIO_PIN);
-    PORTA.OUTSET = (1 << TM1637_CLK_PIN);
+    PORTC.OUTSET = (1 << TM1637_CLK_PIN);
     _delay_us(2);
     PORTA.OUTCLR = (1 << TM1637_DIO_PIN);
     _delay_us(2);
-    PORTA.OUTCLR = (1 << TM1637_CLK_PIN);
+    PORTC.OUTCLR = (1 << TM1637_CLK_PIN);
     _delay_us(2);
 }
 
 void tm1637_stop(void) {
-    PORTA.OUTCLR = (1 << TM1637_CLK_PIN);
+    PORTC.OUTCLR = (1 << TM1637_CLK_PIN);
     _delay_us(2);
     PORTA.OUTCLR = (1 << TM1637_DIO_PIN);
     _delay_us(2);
-    PORTA.OUTSET = (1 << TM1637_CLK_PIN);
+    PORTC.OUTSET = (1 << TM1637_CLK_PIN);
     _delay_us(2);
     PORTA.OUTSET = (1 << TM1637_DIO_PIN);
     _delay_us(2);
@@ -333,7 +270,7 @@ void tm1637_stop(void) {
 
 void tm1637_write_byte(uint8_t b) {
     for(uint8_t i = 0; i < 8; i++) {
-        PORTA.OUTCLR = (1 << TM1637_CLK_PIN);
+        PORTC.OUTCLR = (1 << TM1637_CLK_PIN);
         _delay_us(2);
         
         if(b & 0x01)
@@ -342,22 +279,22 @@ void tm1637_write_byte(uint8_t b) {
             PORTA.OUTCLR = (1 << TM1637_DIO_PIN);
         
         _delay_us(2);
-        PORTA.OUTSET = (1 << TM1637_CLK_PIN);
+        PORTC.OUTSET = (1 << TM1637_CLK_PIN);
         _delay_us(2);
         b >>= 1;
     }
     
     // Wait for ACK
-    PORTA.OUTCLR = (1 << TM1637_CLK_PIN);
+    PORTC.OUTCLR = (1 << TM1637_CLK_PIN);
     PORTA.DIRCLR = (1 << TM1637_DIO_PIN);  // Set DIO as input for ACK
     _delay_us(5);
     
     // Read ACK (not used but proper protocol)
     // uint8_t ack = !(PORTA.IN & (1 << TM1637_DIO_PIN));
     
-    PORTA.OUTSET = (1 << TM1637_CLK_PIN);
+    PORTC.OUTSET = (1 << TM1637_CLK_PIN);
     _delay_us(2);
-    PORTA.OUTCLR = (1 << TM1637_CLK_PIN);
+    PORTC.OUTCLR = (1 << TM1637_CLK_PIN);
     
     PORTA.DIRSET = (1 << TM1637_DIO_PIN);  // Set DIO back to output
     _delay_us(2);
@@ -387,4 +324,4 @@ void display_distance(uint16_t distance) {
     
     // Display the segments
     tm1637_display(segments);
-} 
+}

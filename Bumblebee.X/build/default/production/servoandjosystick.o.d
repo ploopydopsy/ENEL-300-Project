@@ -1,5 +1,5 @@
-build/default/production/newavr-main1.o.d \
- build/default/production/newavr-main1.o: newavr-main1.c \
+build/default/production/servoandjosystick.o.d \
+ build/default/production/servoandjosystick.o: servoandjosystick.c \
  /Applications/microchip/xc8/v3.00/avr/avr/include/avr/io.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/avr/sfr_defs.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/inttypes.h \

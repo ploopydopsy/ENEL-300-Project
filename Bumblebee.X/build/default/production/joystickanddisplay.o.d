@@ -1,5 +1,5 @@
-build/default/production/newavr-main1.o.d \
- build/default/production/newavr-main1.o: newavr-main1.c \
+build/default/production/joystickanddisplay.o.d \
+ build/default/production/joystickanddisplay.o: joystickanddisplay.c \
  /Applications/microchip/xc8/v3.00/avr/avr/include/avr/io.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/avr/sfr_defs.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/inttypes.h \

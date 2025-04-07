@@ -1,5 +1,6 @@
-build/default/production/newavr-main1.o.d \
- build/default/production/newavr-main1.o: newavr-main1.c \
+build/default/production/metaldetectorservo_and_joystick.o.d \
+ build/default/production/metaldetectorservo_and_joystick.o: \
+ metaldetectorservo_and_joystick.c \
  /Applications/microchip/xc8/v3.00/avr/avr/include/avr/io.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/avr/sfr_defs.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/inttypes.h \
@@ -14,6 +15,7 @@ build/default/production/newavr-main1.o.d \
  /Applications/microchip/xc8/v3.00/avr/avr/include/avr/xmega.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/avr/fuse.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/avr/lock.h \
+ /Applications/microchip/xc8/v3.00/avr/avr/include/avr/interrupt.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/util/delay.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/util/delay_basic.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/math.h
@@ -45,6 +47,8 @@ build/default/production/newavr-main1.o.d \
 /Applications/microchip/xc8/v3.00/avr/avr/include/avr/fuse.h:
 
 /Applications/microchip/xc8/v3.00/avr/avr/include/avr/lock.h:
+
+/Applications/microchip/xc8/v3.00/avr/avr/include/avr/interrupt.h:
 
 /Applications/microchip/xc8/v3.00/avr/avr/include/util/delay.h:
 
