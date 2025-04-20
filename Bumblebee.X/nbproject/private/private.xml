@@ -3,22 +3,29 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/steering_and_motor_SPRINT5.c</file>
             <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/joystick_servo_bluetooth.c</file>
-            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/hamza_motor_code.c</file>
             <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/fullpart2.c</file>
-            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/Wdistancedetector.c</file>
             <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/Wmetaldetectorservo.c</file>
-            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/FULL.c</file>
             <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/new.c</file>
+            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/distancedetectororiginal.c</file>
             <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/newavr-main1.c</file>
+            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/ESP32_MASTER.cpp</file>
+            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/newavr-main2.c</file>
+            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/Wsteeringservoandjosystick.c</file>
+            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/AVR_MAIN.c</file>
+            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/main.c</file>
+            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/AVR_SECONDARY.c</file>
+            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/ESP32_SLAVE.cpp</file>
+            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/steering_and_motor_SPRINT5.c</file>
+            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/hamza_motor_code.c</file>
+            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/Wdistancedetector.c</file>
+            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/FULL.c</file>
+            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/AVR2.c</file>
             <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/RGB_and_LED.c</file>
             <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/Wmotordriver.c</file>
-            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/Wsteeringservoandjosystick.c</file>
             <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/Servo1andServo2Code.c</file>
             <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/news.c</file>
             <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/joystickanddisplay_TROUBLESHOOTING.c</file>
-            <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/main.c</file>
             <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/joystick_servo_255_QUANTIZED.c</file>
             <file>file:/Users/williamadebiyi/MPLABXProjects/ENEL-300-Project/Bumblebee.X/newavr-main.c</file>
         </group>

@@ -1,14 +1,46 @@
 /**
- * secondary.c - Secondary AVR128DB28 for RC Car Project
+ * File:   AVR_SECONDARY.c
+ * Author: william adebiyi
+ *
+ * Created on April 20, 2025
+ * 
+ * Secondary AVR128DB28 Microcontroller for RC Car Project
  * ENEL 300 - Winter 2025
  * 
- * This microcontroller handles:
- * - Metal detector servo (PA0)
- * - HC-SR04 ultrasonic distance sensor (TRIG: PD1, ECHO: PD4)
- * - TM1637 4-digit display (CLK: PA3, DIO: PA4)
+ * This secondary microcontroller handles the sensor and display aspects:
+ * - Metal detector arm servo control (up/down position)
+ * - Ultrasonic distance measurements (HC-SR04 sensor)
+ * - Distance display on TM1637 4-digit 7-segment display
  * 
- * Receives control signals from ESP32:
- * - Metal detector servo up/down (PD2) - Digital
+ * The microcontroller receives control signals from:
+ * - PD2: Metal detector servo control from ESP32 (digital HIGH/LOW)
+ * 
+ * Hardware Connections:
+ * - PA0 (TCA0 WO0): Metal detector servo PWM signal (50Hz)
+ * - PD1: HC-SR04 TRIG pin (10µs pulse output)
+ * - PD4: HC-SR04 ECHO pin (input pulse duration measurement)
+ * - PA3: TM1637 display CLK pin
+ * - PA4: TM1637 display DIO pin
+ * 
+ * Key Features:
+ * - 4MHz system clock derived from internal oscillator
+ * - Precise distance measurement using timer capture
+ * - Weighted average filtering for fast response while filtering glitches
+ * - Startup animation on the display (8888 pattern)
+ * - Bit-banged protocol implementation for TM1637 display
+ * - Pin change interrupts for precise echo pulse timing
+ * 
+ * Distance Calculation:
+ * Uses time-of-flight principle to calculate distance:
+ * - Sends 10µs trigger pulse to HC-SR04
+ * - Measures duration of echo pulse
+ * - Converts duration to distance (d = duration ÷ 117)
+ * - Applies filtering to reject outliers and smooth readings
+ * 
+ * Metal Detector Operation:
+ * - When ESP32 signal on PD2 is HIGH: Servo moves to DOWN position
+ * - When ESP32 signal on PD2 is LOW: Servo moves to UP position
+ * - Uses PWM signals of ~1.1ms (UP) and ~1.9ms (DOWN) pulse width
  */
 
 #define F_CPU 4000000UL  // 4MHz clock

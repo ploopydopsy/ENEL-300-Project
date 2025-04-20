@@ -1,16 +1,43 @@
 /**
- * main.c - Main AVR128DB28 for RC Car Project (Improved Motor Control)
+ * File:   AVR_MAIN.c
+ * Author: william adebiyi
+ *
+ * Created on April 20, 2025
+ * 
+ * Main AVR128DB28 Microcontroller for RC Car Project
  * ENEL 300 - Winter 2025
  * 
- * This microcontroller handles:
- * - Steering servo (PA0)
- * - DC motor control via L298N (PA1-PA3)
- * - Headlights (PA5)
+ * This is the primary microcontroller for the RC car, responsible for:
+ * - Steering servo control (precise PWM signal generation)
+ * - DC motor control via L298N motor driver (speed and direction)
+ * - Headlight operation (digital on/off control)
  * 
- * Receives control signals from ESP32:
- * - Steering (PD2) - DAC
- * - Motor (PD3) - DAC
- * - Headlight Toggle (PD5) - Digital
+ * The microcontroller receives commands from the ESP32 slave via:
+ * - PD2: Steering command from ESP32 (analog DAC signal, 0-3.3V)
+ * - PD3: Motor command from ESP32 (analog DAC signal, 0-3.3V)
+ * - PD5: Headlight toggle from ESP32 (digital HIGH/LOW)
+ * 
+ * Hardware Connections:
+ * - PA0 (TCA0 WO0): Steering servo PWM (50Hz, 1-2ms pulse width)
+ * - PA1 (TCA0 WO1): Motor ENA pin (PWM speed control)
+ * - PA2/PA3: Motor IN1/IN2 pins (direction control)
+ * - PA5: Headlight control pin
+ * 
+ * Key Features:
+ * - 4MHz system clock derived from internal oscillator
+ * - 12-bit ADC for accurate reading of ESP32 DAC signals
+ * - TCA0 timer for precise PWM generation (62.5kHz tick rate)
+ * - Median filtering for smooth, stable control inputs
+ * - Safety timeout detection for signal loss
+ * - Automatic centering/shutdown in case of connection failure
+ * 
+ * Tuning Parameters:
+ * - SERVO_MIN/MAX/CENTER: Configure servo range and center position
+ * - SERVO_DEADBAND: Adjust steering dead zone for stable center
+ * - THROTTLE_IDLE/DEADBAND: Configure motor idle position and dead zone
+ * - MOTOR_MIN/MAX_POWER: Motor response curve adjustment
+ * - MOTOR_ACCEL/DECEL_RATE: Speed of acceleration/deceleration
+ * - DIR_CHANGE_DELAY: Delay when changing motor direction
  */
 
 #define F_CPU 4000000UL  // 4MHz clock
