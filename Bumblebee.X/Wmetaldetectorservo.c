@@ -1,4 +1,6 @@
 #define F_CPU 20000000UL  // Intended 20 MHz, but if your clock is actually 8MHz, this mapping uses a 1MHz tick (8MHz/8)
+//CODE doesnt work FOR METAL DETECTOR ON PC0 but may be wrong timer but this is the concept
+//metal_detector_servo.c
 
 #include <avr/io.h>
 #include <util/delay.h>

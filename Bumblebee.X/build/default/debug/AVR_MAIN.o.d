@@ -1,5 +1,5 @@
-build/default/production/news.o.d build/default/production/news.o: news.c \
- /Applications/microchip/xc8/v3.00/avr/avr/include/avr/io.h \
+build/default/debug/AVR_MAIN.o.d build/default/debug/AVR_MAIN.o: \
+ AVR_MAIN.c /Applications/microchip/xc8/v3.00/avr/avr/include/avr/io.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/avr/sfr_defs.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/inttypes.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/features.h \
@@ -17,7 +17,8 @@ build/default/production/news.o.d build/default/production/news.o: news.c \
  /Applications/microchip/xc8/v3.00/avr/avr/include/util/delay.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/util/delay_basic.h \
  /Applications/microchip/xc8/v3.00/avr/avr/include/math.h \
- /Applications/microchip/xc8/v3.00/avr/lib/gcc/avr/5.4.0/include/stdbool.h
+ /Applications/microchip/xc8/v3.00/avr/lib/gcc/avr/5.4.0/include/stdbool.h \
+ /Applications/microchip/xc8/v3.00/avr/avr/include/stdlib.h
 
 /Applications/microchip/xc8/v3.00/avr/avr/include/avr/io.h:
 
@@ -56,3 +57,5 @@ build/default/production/news.o.d build/default/production/news.o: news.c \
 /Applications/microchip/xc8/v3.00/avr/avr/include/math.h:
 
 /Applications/microchip/xc8/v3.00/avr/lib/gcc/avr/5.4.0/include/stdbool.h:
+
+/Applications/microchip/xc8/v3.00/avr/avr/include/stdlib.h:

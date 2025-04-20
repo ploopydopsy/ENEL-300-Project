@@ -1,15 +1,15 @@
 Archive member included to satisfy reference by file (symbol)
 
-/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_divmodhi4.o)
-                              build/default/production/AVR_MAIN.o (__divmodhi4)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodsi4.o)
-                              build/default/production/AVR_MAIN.o (__udivmodsi4)
+                              build/default/debug/AVR_MAIN.o (__udivmodsi4)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_copy_data.o)
-                              build/default/production/AVR_MAIN.o (__do_copy_data)
+                              build/default/debug/AVR_MAIN.o (__do_copy_data)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_umulhisi3.o)
-                              build/default/production/AVR_MAIN.o (__umulhisi3)
-/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodhi4.o)
-                              /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_divmodhi4.o) (__udivmodhi4)
+                              build/default/debug/AVR_MAIN.o (__umulhisi3)
+/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_usmulhisi3.o)
+                              build/default/debug/AVR_MAIN.o (__usmulhisi3)
+/Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_muluhisi3.o)
+                              build/default/debug/AVR_MAIN.o (__muluhisi3)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(exit.o)
                               /Applications/microchip/mplabx/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o (exit)
 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(_Exit.o)
@@ -21,31 +21,9 @@ Discarded input sections
 
  .data          0x0000000000000000        0x0 /Applications/microchip/mplabx/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
  .bss           0x0000000000000000        0x0 /Applications/microchip/mplabx/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
- .text          0x0000000000000000        0x0 build/default/production/AVR_MAIN.o
- .data          0x0000000000000000        0x0 build/default/production/AVR_MAIN.o
- .bss           0x0000000000000000        0x0 build/default/production/AVR_MAIN.o
- .bss.direction_change_counter
-                0x0000000000000000        0x1 build/default/production/AVR_MAIN.o
- .data.was_forward
-                0x0000000000000000        0x1 build/default/production/AVR_MAIN.o
- .data.is_forward
-                0x0000000000000000        0x1 build/default/production/AVR_MAIN.o
- .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_divmodhi4.o)
- .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_divmodhi4.o)
- .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_divmodhi4.o)
- .text.libgcc.mul
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_divmodhi4.o)
- .stack.descriptors
-                0x0000000000000000       0x19 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_divmodhi4.o)
- .text.libgcc   0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_divmodhi4.o)
- .text.libgcc.prologue
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_divmodhi4.o)
- .text.libgcc.builtins
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_divmodhi4.o)
- .text.libgcc.fmul
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_divmodhi4.o)
- .text.libgcc.fixed
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_divmodhi4.o)
+ .text          0x0000000000000000        0x0 build/default/debug/AVR_MAIN.o
+ .data          0x0000000000000000        0x0 build/default/debug/AVR_MAIN.o
+ .bss           0x0000000000000000        0x0 build/default/debug/AVR_MAIN.o
  .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodsi4.o)
  .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodsi4.o)
  .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodsi4.o)
@@ -94,22 +72,38 @@ Discarded input sections
                 0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_umulhisi3.o)
  .text.libgcc.fixed
                 0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_umulhisi3.o)
- .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodhi4.o)
- .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodhi4.o)
- .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodhi4.o)
- .text.libgcc.mul
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodhi4.o)
+ .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_usmulhisi3.o)
+ .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_usmulhisi3.o)
+ .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_usmulhisi3.o)
  .stack.descriptors
-                0x0000000000000000       0x1a /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodhi4.o)
- .text.libgcc   0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000       0x39 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_usmulhisi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_usmulhisi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_usmulhisi3.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_usmulhisi3.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_usmulhisi3.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_usmulhisi3.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_usmulhisi3.o)
+ .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_muluhisi3.o)
+ .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_muluhisi3.o)
+ .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_muluhisi3.o)
+ .stack.descriptors
+                0x0000000000000000       0x19 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_muluhisi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_muluhisi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_muluhisi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_muluhisi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_muluhisi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_muluhisi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_muluhisi3.o)
  .text          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(exit.o)
  .data          0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(exit.o)
  .bss           0x0000000000000000        0x0 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(exit.o)
@@ -158,10 +152,12 @@ Address of section .data set to 0x804000
                 0x0000000000008000                __RODATA_PM_OFFSET__ = 0x8000
 LOAD /Applications/microchip/mplabx/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
                 0x0000000000000001                __MPLAB_BUILD = 0x1
-LOAD build/default/production/AVR_MAIN.o
+LOAD build/default/debug/AVR_MAIN.o
 START GROUP
 LOAD /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libm.a
 END GROUP
+                0x0000000000000001                __MPLAB_DEBUG = 0x1
+                0x0000000000000001                __DEBUG = 0x1
 START GROUP
 LOAD /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a
 LOAD /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libm.a
@@ -279,7 +275,6 @@ END GROUP
  *(.dinit)
  .dinit         0x00000000000000a8       0x18 data_init
                 0x00000000000000c0                . = ALIGN (0x2)
- *fill*         0x00000000000000c0        0x0 
                 0x00000000000000c0                __trampolines_start = .
  *(.trampolines)
  .trampolines   0x00000000000000c0        0x0 linker stubs
@@ -417,7 +412,7 @@ END GROUP
 
 .comment        0x0000000000000000       0x5b
  *(.comment)
- .comment       0x0000000000000000       0x2f build/default/production/AVR_MAIN.o
+ .comment       0x0000000000000000       0x2f build/default/debug/AVR_MAIN.o
                                          0x30 (size before relaxing)
  .comment       0x000000000000002f       0x2c /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(exit.o)
                                          0x2d (size before relaxing)
@@ -426,13 +421,13 @@ END GROUP
 .stack.descriptors.hdr
                 0x0000000000000000       0x62
  .stack.descriptors.hdr
-                0x0000000000000000        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_divmodhi4.o)
+                0x0000000000000000        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodsi4.o)
  .stack.descriptors.hdr
-                0x000000000000000e        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodsi4.o)
+                0x000000000000000e        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_umulhisi3.o)
  .stack.descriptors.hdr
-                0x000000000000001c        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_umulhisi3.o)
+                0x000000000000001c        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_usmulhisi3.o)
  .stack.descriptors.hdr
-                0x000000000000002a        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodhi4.o)
+                0x000000000000002a        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_muluhisi3.o)
  .stack.descriptors.hdr
                 0x0000000000000038        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(exit.o)
  .stack.descriptors.hdr
@@ -462,41 +457,41 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000       0x78
+.debug_aranges  0x0000000000000000       0x80
  *(.debug_aranges)
  .debug_aranges
-                0x0000000000000000       0x78 build/default/production/AVR_MAIN.o
+                0x0000000000000000       0x80 build/default/debug/AVR_MAIN.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x44f0
+.debug_info     0x0000000000000000     0x44c9
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000     0x272b /Applications/microchip/mplabx/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
- .debug_info    0x000000000000272b     0x1dc5 build/default/production/AVR_MAIN.o
+ .debug_info    0x000000000000272b     0x1d9e build/default/debug/AVR_MAIN.o
 
-.debug_abbrev   0x0000000000000000     0x2848
+.debug_abbrev   0x0000000000000000     0x2839
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000     0x2518 /Applications/microchip/mplabx/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
- .debug_abbrev  0x0000000000002518      0x330 build/default/production/AVR_MAIN.o
+ .debug_abbrev  0x0000000000002518      0x321 build/default/debug/AVR_MAIN.o
 
-.debug_line     0x0000000000000000      0x630
+.debug_line     0x0000000000000000      0x69d
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x1ce /Applications/microchip/mplabx/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
- .debug_line    0x00000000000001ce      0x462 build/default/production/AVR_MAIN.o
+ .debug_line    0x00000000000001ce      0x4cf build/default/debug/AVR_MAIN.o
 
-.debug_frame    0x0000000000000000      0x100
+.debug_frame    0x0000000000000000       0xe4
  *(.debug_frame)
- .debug_frame   0x0000000000000000      0x100 build/default/production/AVR_MAIN.o
+ .debug_frame   0x0000000000000000       0xe4 build/default/debug/AVR_MAIN.o
 
-.debug_str      0x0000000000000000     0x11a7
+.debug_str      0x0000000000000000     0x119a
  *(.debug_str)
  .debug_str     0x0000000000000000     0x111e /Applications/microchip/mplabx/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
- .debug_str     0x000000000000111e       0x89 build/default/production/AVR_MAIN.o
+ .debug_str     0x000000000000111e       0x7c build/default/debug/AVR_MAIN.o
 
-.debug_loc      0x0000000000000000      0x3b0
+.debug_loc      0x0000000000000000      0x369
  *(.debug_loc)
- .debug_loc     0x0000000000000000      0x3b0 build/default/production/AVR_MAIN.o
+ .debug_loc     0x0000000000000000      0x369 build/default/debug/AVR_MAIN.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -516,13 +511,13 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000       0x80
+.debug_ranges   0x0000000000000000       0x70
  *(.debug_ranges)
- .debug_ranges  0x0000000000000000       0x80 build/default/production/AVR_MAIN.o
+ .debug_ranges  0x0000000000000000       0x70 build/default/debug/AVR_MAIN.o
 
 .debug_macro
  *(.debug_macro)
-OUTPUT(dist/default/production/Bumblebee.X.production.elf elf32-avr)
+OUTPUT(dist/default/debug/Bumblebee.X.debug.elf elf32-avr)
 LOAD linker stubs
 LOAD data_init
 
@@ -532,242 +527,260 @@ LOAD data_init
                 0x0000000000000000       0x40 /Applications/microchip/mplabx/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
 
 .bss.current_time
-                0x0000000000804020        0x4
+                0x0000000000804010        0x4
  .bss.current_time
-                0x0000000000804020        0x4 build/default/production/AVR_MAIN.o
-                0x0000000000804020                current_time
+                0x0000000000804010        0x4 build/default/debug/AVR_MAIN.o
+                0x0000000000804010                current_time
 
 .bss.last_activity_time
-                0x0000000000804024        0x4
+                0x0000000000804014        0x4
  .bss.last_activity_time
-                0x0000000000804024        0x4 build/default/production/AVR_MAIN.o
-                0x0000000000804024                last_activity_time
+                0x0000000000804014        0x4 build/default/debug/AVR_MAIN.o
+                0x0000000000804014                last_activity_time
 
 .bss.buffer_index
-                0x000000000080402d        0x1
+                0x000000000080401f        0x1
  .bss.buffer_index
-                0x000000000080402d        0x1 build/default/production/AVR_MAIN.o
-                0x000000000080402d                buffer_index
+                0x000000000080401f        0x1 build/default/debug/AVR_MAIN.o
+                0x000000000080401f                buffer_index
 
 .bss.motor_buffer
-                0x0000000000804000       0x10
+                0x0000000000804000        0x8
  .bss.motor_buffer
-                0x0000000000804000       0x10 build/default/production/AVR_MAIN.o
+                0x0000000000804000        0x8 build/default/debug/AVR_MAIN.o
                 0x0000000000804000                motor_buffer
 
 .bss.steering_buffer
-                0x0000000000804010       0x10
+                0x0000000000804008        0x8
  .bss.steering_buffer
-                0x0000000000804010       0x10 build/default/production/AVR_MAIN.o
-                0x0000000000804010                steering_buffer
-
-.bss.target_duty
-                0x000000000080402e        0x1
- .bss.target_duty
-                0x000000000080402e        0x1 build/default/production/AVR_MAIN.o
-                0x000000000080402e                target_duty
-
-.bss.current_duty
-                0x000000000080402f        0x1
- .bss.current_duty
-                0x000000000080402f        0x1 build/default/production/AVR_MAIN.o
-                0x000000000080402f                current_duty
+                0x0000000000804008        0x8 build/default/debug/AVR_MAIN.o
+                0x0000000000804008                steering_buffer
 
 .bss.headlight_on
-                0x0000000000804030        0x1
+                0x0000000000804020        0x1
  .bss.headlight_on
-                0x0000000000804030        0x1 build/default/production/AVR_MAIN.o
-                0x0000000000804030                headlight_on
+                0x0000000000804020        0x1 build/default/debug/AVR_MAIN.o
+                0x0000000000804020                headlight_on
 
-.text.main      0x000000000000012a      0x15a
- .text.main     0x000000000000012a      0x15a build/default/production/AVR_MAIN.o
-                0x000000000000012a                main
+.bss.rgb_led_on
+                0x0000000000804021        0x1
+ .bss.rgb_led_on
+                0x0000000000804021        0x1 build/default/debug/AVR_MAIN.o
+                0x0000000000804021                rgb_led_on
 
-.text.get_filtered_value
-                0x0000000000000284       0xda
- .text.get_filtered_value
-                0x0000000000000284       0xda build/default/production/AVR_MAIN.o
-                0x0000000000000284                get_filtered_value
+.bss.rgb_color_index
+                0x0000000000804022        0x1
+ .bss.rgb_color_index
+                0x0000000000804022        0x1 build/default/debug/AVR_MAIN.o
+                0x0000000000804022                rgb_color_index
 
-.text.control_steering
-                0x000000000000035e       0xb8
- .text.control_steering
-                0x000000000000035e       0xb8 build/default/production/AVR_MAIN.o
-                0x000000000000035e                control_steering
+.bss.rgb_color_raw
+                0x0000000000804018        0x2
+ .bss.rgb_color_raw
+                0x0000000000804018        0x2 build/default/debug/AVR_MAIN.o
+                0x0000000000804018                rgb_color_raw
+
+.rodata.RGB_COLORS
+                0x000000000080812a       0x18 load address 0x000000000000012a
+ .rodata.RGB_COLORS
+                0x000000000080812a       0x18 build/default/debug/AVR_MAIN.o
+                0x000000000080812a                RGB_COLORS
+
+.text.main      0x0000000000000142      0x1ac
+ .text.main     0x0000000000000142      0x1ac build/default/debug/AVR_MAIN.o
+                0x0000000000000142                main
 
 .text.control_motor
-                0x0000000000000416       0x6c
+                0x00000000000002ee       0xa4
  .text.control_motor
-                0x0000000000000416       0x6c build/default/production/AVR_MAIN.o
-                0x0000000000000416                control_motor
+                0x00000000000002ee       0xa4 build/default/debug/AVR_MAIN.o
+                0x00000000000002ee                control_motor
 
-.text.libgcc.div
-                0x0000000000000482       0x44
- .text.libgcc.div
-                0x0000000000000482       0x44 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodsi4.o)
-                0x0000000000000482                __udivmodsi4
+.text.control_steering
+                0x0000000000000392       0x88
+ .text.control_steering
+                0x0000000000000392       0x88 build/default/debug/AVR_MAIN.o
+                0x0000000000000392                control_steering
 
-.text.is_signal_active
-                0x00000000000004c6       0x38
- .text.is_signal_active
-                0x00000000000004c6       0x38 build/default/production/AVR_MAIN.o
-                0x00000000000004c6                is_signal_active
+.text.control_rgb_led
+                0x000000000000041a       0x7c
+ .text.control_rgb_led
+                0x000000000000041a       0x7c build/default/debug/AVR_MAIN.o
+                0x000000000000041a                control_rgb_led
 
 .text.init_pins
-                0x00000000000004fe       0x36
+                0x0000000000000496       0x56
  .text.init_pins
-                0x00000000000004fe       0x36 build/default/production/AVR_MAIN.o
-                0x00000000000004fe                init_pins
+                0x0000000000000496       0x56 build/default/debug/AVR_MAIN.o
+                0x0000000000000496                init_pins
+
+.text.get_filtered_value
+                0x00000000000004ec       0x54
+ .text.get_filtered_value
+                0x00000000000004ec       0x54 build/default/debug/AVR_MAIN.o
+                0x00000000000004ec                get_filtered_value
+
+.text.libgcc.div
+                0x0000000000000540       0x44
+ .text.libgcc.div
+                0x0000000000000540       0x44 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodsi4.o)
+                0x0000000000000540                __udivmodsi4
+
+.text.is_signal_active
+                0x0000000000000584       0x38
+ .text.is_signal_active
+                0x0000000000000584       0x38 build/default/debug/AVR_MAIN.o
+                0x0000000000000584                is_signal_active
 
 .text.set_safe_state
-                0x0000000000000534       0x2e
+                0x00000000000005bc       0x2a
  .text.set_safe_state
-                0x0000000000000534       0x2e build/default/production/AVR_MAIN.o
-                0x0000000000000534                set_safe_state
-
-.text.libgcc.div
-                0x0000000000000562       0x28
- .text.libgcc.div
-                0x0000000000000562       0x28 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_divmodhi4.o)
-                0x0000000000000562                __divmodhi4
-                0x0000000000000562                _div
-
-.text.libgcc.div
-                0x000000000000058a       0x28
- .text.libgcc.div
-                0x000000000000058a       0x28 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_udivmodhi4.o)
-                0x000000000000058a                __udivmodhi4
+                0x00000000000005bc       0x2a build/default/debug/AVR_MAIN.o
+                0x00000000000005bc                set_safe_state
 
 .text.init_pwm_tca0
-                0x00000000000005b2       0x26
+                0x00000000000005e6       0x26
  .text.init_pwm_tca0
-                0x00000000000005b2       0x26 build/default/production/AVR_MAIN.o
-                0x00000000000005b2                init_pwm_tca0
+                0x00000000000005e6       0x26 build/default/debug/AVR_MAIN.o
+                0x00000000000005e6                init_pwm_tca0
 
-.text.read_adc  0x00000000000005d8       0x1e
+.text.read_adc  0x000000000000060c       0x1e
  .text.read_adc
-                0x00000000000005d8       0x1e build/default/production/AVR_MAIN.o
-                0x00000000000005d8                read_adc
+                0x000000000000060c       0x1e build/default/debug/AVR_MAIN.o
+                0x000000000000060c                read_adc
 
 .text.libgcc.mul
-                0x00000000000005f6       0x1e
+                0x000000000000062a       0x1e
  .text.libgcc.mul
-                0x00000000000005f6       0x1e /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_umulhisi3.o)
-                0x00000000000005f6                __umulhisi3
+                0x000000000000062a       0x1e /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_umulhisi3.o)
+                0x000000000000062a                __umulhisi3
 
-.text.exit      0x0000000000000614       0x16
- .text.exit     0x0000000000000614       0x16 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(exit.o)
-                0x0000000000000614                exit
+.text.libgcc.mul
+                0x0000000000000648       0x16
+ .text.libgcc.mul
+                0x0000000000000648       0x16 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_muluhisi3.o)
+                0x0000000000000648                __muluhisi3
+
+.text.exit      0x000000000000065e       0x16
+ .text.exit     0x000000000000065e       0x16 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(exit.o)
+                0x000000000000065e                exit
 
 .text.control_headlight
-                0x000000000000062a       0x14
+                0x0000000000000674       0x14
  .text.control_headlight
-                0x000000000000062a       0x14 build/default/production/AVR_MAIN.o
-                0x000000000000062a                control_headlight
+                0x0000000000000674       0x14 build/default/debug/AVR_MAIN.o
+                0x0000000000000674                control_headlight
 
 .text.init_clock
-                0x000000000000063e       0x12
+                0x0000000000000688       0x12
  .text.init_clock
-                0x000000000000063e       0x12 build/default/production/AVR_MAIN.o
-                0x000000000000063e                init_clock
+                0x0000000000000688       0x12 build/default/debug/AVR_MAIN.o
+                0x0000000000000688                init_clock
 
-.text.init_adc  0x0000000000000650       0x12
+.text.init_adc  0x000000000000069a       0x12
  .text.init_adc
-                0x0000000000000650       0x12 build/default/production/AVR_MAIN.o
-                0x0000000000000650                init_adc
+                0x000000000000069a       0x12 build/default/debug/AVR_MAIN.o
+                0x000000000000069a                init_adc
 
-.text           0x0000000000000662        0x4
- .text          0x0000000000000662        0x4 /Applications/microchip/mplabx/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
-                0x0000000000000662                __vector_20
-                0x0000000000000662                __vector_22
-                0x0000000000000662                __vector_28
-                0x0000000000000662                __vector_1
-                0x0000000000000662                __vector_32
-                0x0000000000000662                __vector_34
-                0x0000000000000662                __vector_24
-                0x0000000000000662                __vector_12
-                0x0000000000000662                __bad_interrupt
-                0x0000000000000662                __vector_6
-                0x0000000000000662                __vector_31
-                0x0000000000000662                __vector_35
-                0x0000000000000662                __vector_39
-                0x0000000000000662                __vector_3
-                0x0000000000000662                __vector_23
-                0x0000000000000662                __vector_30
-                0x0000000000000662                __vector_25
-                0x0000000000000662                __vector_11
-                0x0000000000000662                __vector_13
-                0x0000000000000662                __vector_17
-                0x0000000000000662                __vector_19
-                0x0000000000000662                __vector_7
-                0x0000000000000662                __vector_41
-                0x0000000000000662                __vector_27
-                0x0000000000000662                __vector_5
-                0x0000000000000662                __vector_33
-                0x0000000000000662                __vector_37
-                0x0000000000000662                __vector_4
-                0x0000000000000662                __vector_9
-                0x0000000000000662                __vector_2
-                0x0000000000000662                __vector_21
-                0x0000000000000662                __vector_15
-                0x0000000000000662                __vector_36
-                0x0000000000000662                __vector_29
-                0x0000000000000662                __vector_40
-                0x0000000000000662                __vector_8
-                0x0000000000000662                __vector_26
-                0x0000000000000662                __vector_14
-                0x0000000000000662                __vector_10
-                0x0000000000000662                __vector_16
-                0x0000000000000662                __vector_18
-                0x0000000000000662                __vector_38
+.text.libgcc.mul
+                0x00000000000006ac        0xe
+ .text.libgcc.mul
+                0x00000000000006ac        0xe /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avrxmega4/memx-const/mapped/libgcc.a(_usmulhisi3.o)
+                0x00000000000006ac                __usmulhisi3
+                0x00000000000006b0                __usmulhisi3_tail
 
-.text._Exit     0x0000000000000666        0x4
- .text._Exit    0x0000000000000666        0x4 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(_Exit.o)
-                0x0000000000000666                _Exit
+.text           0x00000000000006ba        0x4
+ .text          0x00000000000006ba        0x4 /Applications/microchip/mplabx/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
+                0x00000000000006ba                __vector_20
+                0x00000000000006ba                __vector_22
+                0x00000000000006ba                __vector_28
+                0x00000000000006ba                __vector_1
+                0x00000000000006ba                __vector_32
+                0x00000000000006ba                __vector_34
+                0x00000000000006ba                __vector_24
+                0x00000000000006ba                __vector_12
+                0x00000000000006ba                __bad_interrupt
+                0x00000000000006ba                __vector_6
+                0x00000000000006ba                __vector_31
+                0x00000000000006ba                __vector_35
+                0x00000000000006ba                __vector_39
+                0x00000000000006ba                __vector_3
+                0x00000000000006ba                __vector_23
+                0x00000000000006ba                __vector_30
+                0x00000000000006ba                __vector_25
+                0x00000000000006ba                __vector_11
+                0x00000000000006ba                __vector_13
+                0x00000000000006ba                __vector_17
+                0x00000000000006ba                __vector_19
+                0x00000000000006ba                __vector_7
+                0x00000000000006ba                __vector_41
+                0x00000000000006ba                __vector_27
+                0x00000000000006ba                __vector_5
+                0x00000000000006ba                __vector_33
+                0x00000000000006ba                __vector_37
+                0x00000000000006ba                __vector_4
+                0x00000000000006ba                __vector_9
+                0x00000000000006ba                __vector_2
+                0x00000000000006ba                __vector_21
+                0x00000000000006ba                __vector_15
+                0x00000000000006ba                __vector_36
+                0x00000000000006ba                __vector_29
+                0x00000000000006ba                __vector_40
+                0x00000000000006ba                __vector_8
+                0x00000000000006ba                __vector_26
+                0x00000000000006ba                __vector_14
+                0x00000000000006ba                __vector_10
+                0x00000000000006ba                __vector_16
+                0x00000000000006ba                __vector_18
+                0x00000000000006ba                __vector_38
+
+.text._Exit     0x00000000000006be        0x4
+ .text._Exit    0x00000000000006be        0x4 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(_Exit.o)
+                0x00000000000006be                _Exit
 
 .text.__dummy_fini
-                0x000000000000066a        0x2
+                0x00000000000006c2        0x2
  .text.__dummy_fini
-                0x000000000000066a        0x2 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(exit.o)
-                0x000000000000066a                _fini
+                0x00000000000006c2        0x2 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(exit.o)
+                0x00000000000006c2                _fini
 
 .text.__dummy_funcs_on_exit
-                0x000000000000066c        0x2
+                0x00000000000006c4        0x2
  .text.__dummy_funcs_on_exit
-                0x000000000000066c        0x2 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(exit.o)
-                0x000000000000066c                __funcs_on_exit
+                0x00000000000006c4        0x2 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(exit.o)
+                0x00000000000006c4                __funcs_on_exit
 
 .text.__dummy_simulator_exit
-                0x000000000000066e        0x2
+                0x00000000000006c6        0x2
  .text.__dummy_simulator_exit
-                0x000000000000066e        0x2 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(exit.o)
-                0x000000000000066e                __simulator_exit
+                0x00000000000006c6        0x2 /Applications/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega4/memx-const/mapped/libc.a(exit.o)
+                0x00000000000006c6                __simulator_exit
 
 .data.motor_raw
-                0x0000000000804028        0x2 load address 0x0000000000000670
+                0x000000000080401a        0x2 load address 0x00000000000006c8
  .data.motor_raw
-                0x0000000000804028        0x2 build/default/production/AVR_MAIN.o
-                0x0000000000804028                motor_raw
+                0x000000000080401a        0x2 build/default/debug/AVR_MAIN.o
+                0x000000000080401a                motor_raw
 
 .data.steering_raw
-                0x000000000080402a        0x2 load address 0x0000000000000672
+                0x000000000080401c        0x2 load address 0x00000000000006ca
  .data.steering_raw
-                0x000000000080402a        0x2 build/default/production/AVR_MAIN.o
-                0x000000000080402a                steering_raw
+                0x000000000080401c        0x2 build/default/debug/AVR_MAIN.o
+                0x000000000080401c                steering_raw
 
-.data.prev_pulse_width.4247
-                0x000000000080402c        0x1 load address 0x0000000000000674
- .data.prev_pulse_width.4247
-                0x000000000080402c        0x1 build/default/production/AVR_MAIN.o
+.data.prev_pulse_width.4249
+                0x000000000080401e        0x1 load address 0x00000000000006cc
+ .data.prev_pulse_width.4249
+                0x000000000080401e        0x1 build/default/debug/AVR_MAIN.o
 
 .data.motor_value
-                0x0000000000804031        0x1 load address 0x0000000000000675
+                0x0000000000804023        0x1 load address 0x00000000000006cd
  .data.motor_value
-                0x0000000000804031        0x1 build/default/production/AVR_MAIN.o
-                0x0000000000804031                motor_value
+                0x0000000000804023        0x1 build/default/debug/AVR_MAIN.o
+                0x0000000000804023                motor_value
 
 .data.steering_value
-                0x0000000000804032        0x1 load address 0x0000000000000676
+                0x0000000000804024        0x1 load address 0x00000000000006ce
  .data.steering_value
-                0x0000000000804032        0x1 build/default/production/AVR_MAIN.o
-                0x0000000000804032                steering_value
+                0x0000000000804024        0x1 build/default/debug/AVR_MAIN.o
+                0x0000000000804024                steering_value

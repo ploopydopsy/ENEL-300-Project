@@ -23,15 +23,26 @@
       <itemPath>newavr-main1.c</itemPath>
       <itemPath>new.c</itemPath>
       <itemPath>news.c</itemPath>
-      <itemPath>joystickanddisplay.c</itemPath>
-      <itemPath>joystick servo bluetooth.c</itemPath>
-      <itemPath>joystick255servo.c</itemPath>
       <itemPath>hamza_motor_code.c</itemPath>
       <itemPath>Wmetaldetectorservo.c</itemPath>
       <itemPath>Wsteeringservoandjosystick.c</itemPath>
       <itemPath>distancedetectororiginal.c</itemPath>
       <itemPath>Wdistancedetector.c</itemPath>
       <itemPath>Wmotordriver.c</itemPath>
+      <itemPath>joystick_servo_bluetooth.c</itemPath>
+      <itemPath>joystickanddisplay_TROUBLESHOOTING.c</itemPath>
+      <itemPath>joystick_servo_255_QUANTIZED.c</itemPath>
+      <itemPath>steering_and_motor_SPRINT5.c</itemPath>
+      <itemPath>FULL.c</itemPath>
+      <itemPath>fullpart2.c</itemPath>
+      <itemPath>Servo1andServo2Code.c</itemPath>
+      <itemPath>RGB_and_LED.c</itemPath>
+      <itemPath>AVR2.c</itemPath>
+      <itemPath>AVR_MAIN.c</itemPath>
+      <itemPath>AVR_SECONDARY.c</itemPath>
+      <itemPath>newavr-main2.c</itemPath>
+      <itemPath>ESP32_MASTER.cpp</itemPath>
+      <itemPath>ESP32_SLAVE.cpp</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -77,6 +88,16 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
+      <item path="AVR2.c" ex="true" overriding="false">
+      </item>
+      <item path="FULL.c" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
       <HI-TECH-COMP>
         <property key="additional-warnings" value="true"/>
         <property key="asmlist" value="true"/>
@@ -158,32 +179,54 @@
         <property key="program-the-device-with-default-config-words" value="false"/>
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
+      <item path="RGB_and_LED.c" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
+      <item path="Servo1andServo2Code.c" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
       <item path="Wdistancedetector.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
         </HI-TECH-LINK>
-        <XC8-CO>
-        </XC8-CO>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
+      <item path="Wmetaldetectorservo.c" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
         <XC8-config-global>
         </XC8-config-global>
       </item>
       <item path="Wmotordriver.c" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-config-global>
+        </XC8-config-global>
       </item>
       <item path="Wsteeringservoandjosystick.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
         </HI-TECH-LINK>
-        <XC8-CO>
-        </XC8-CO>
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <XC8-CO>
-        <property key="coverage-enable" value=""/>
-        <property key="stack-guidance" value="false"/>
-      </XC8-CO>
       <XC8-config-global>
         <property key="advanced-elf" value="true"/>
         <property key="constdata-progmem" value="true"/>
@@ -207,40 +250,46 @@
         </HI-TECH-COMP>
         <HI-TECH-LINK>
         </HI-TECH-LINK>
-        <XC8-CO>
-        </XC8-CO>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
+      <item path="fullpart2.c" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
         <XC8-config-global>
         </XC8-config-global>
       </item>
       <item path="hamza_motor_code.c" ex="true" overriding="false">
-      </item>
-      <item path="joystick servo bluetooth.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
         </HI-TECH-LINK>
-        <XC8-CO>
-        </XC8-CO>
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item path="joystick255servo.c" ex="true" overriding="false">
+      <item path="joystick_servo_255_QUANTIZED.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
         </HI-TECH-LINK>
-        <XC8-CO>
-        </XC8-CO>
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item path="joystickanddisplay.c" ex="true" overriding="false">
+      <item path="joystick_servo_bluetooth.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
         </HI-TECH-LINK>
-        <XC8-CO>
-        </XC8-CO>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
+      <item path="joystickanddisplay_TROUBLESHOOTING.c" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
         <XC8-config-global>
         </XC8-config-global>
       </item>
@@ -249,8 +298,6 @@
         </HI-TECH-COMP>
         <HI-TECH-LINK>
         </HI-TECH-LINK>
-        <XC8-CO>
-        </XC8-CO>
         <XC8-config-global>
         </XC8-config-global>
       </item>
@@ -259,8 +306,6 @@
         </HI-TECH-COMP>
         <HI-TECH-LINK>
         </HI-TECH-LINK>
-        <XC8-CO>
-        </XC8-CO>
         <XC8-config-global>
         </XC8-config-global>
       </item>
@@ -269,8 +314,6 @@
         </HI-TECH-COMP>
         <HI-TECH-LINK>
         </HI-TECH-LINK>
-        <XC8-CO>
-        </XC8-CO>
         <XC8-config-global>
         </XC8-config-global>
       </item>
@@ -279,8 +322,6 @@
         </HI-TECH-COMP>
         <HI-TECH-LINK>
         </HI-TECH-LINK>
-        <XC8-CO>
-        </XC8-CO>
         <XC8-config-global>
         </XC8-config-global>
       </item>
@@ -289,18 +330,24 @@
         </HI-TECH-COMP>
         <HI-TECH-LINK>
         </HI-TECH-LINK>
-        <XC8-CO>
-        </XC8-CO>
         <XC8-config-global>
         </XC8-config-global>
+      </item>
+      <item path="newavr-main2.c" ex="true" overriding="false">
       </item>
       <item path="news.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
         </HI-TECH-LINK>
-        <XC8-CO>
-        </XC8-CO>
+        <XC8-config-global>
+        </XC8-config-global>
+      </item>
+      <item path="steering_and_motor_SPRINT5.c" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
         <XC8-config-global>
         </XC8-config-global>
       </item>

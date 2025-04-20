@@ -1,5 +1,6 @@
 #define F_CPU 20000000UL
-
+// OLD WORKING SERVO CODE BUT WRONG FREQUENCY 
+//for metal detector reference
 #include <avr/io.h>
 #include <util/delay.h>
 #include <stdint.h>
