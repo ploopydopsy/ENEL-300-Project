@@ -3,18 +3,18 @@
  * Author: william adebiyi
  *
  * Created on April 20, 2025
- *  
+ *
  * Remote Control Master for RC Car
  * ENEL 300 - Winter 2025
- * 
+ *
  * This module is the master controller for the RC car project.
  * It runs on the ESP32 in the handheld controller and manages:
- * 
+ *
  * - Reading analog joystick inputs for steering and throttle
  * - Processing button presses for metal detector and headlights
  * - Establishing and maintaining Bluetooth connection with the car
  * - Transmitting control commands to the slave ESP32 on the car
- * 
+ *
  * Communication Protocol:
  * Commands are sent as strings in the format "X:YYYY" where:
  * - X is a single character command type:
@@ -23,14 +23,14 @@
  *   M = Metal Detector (0 = UP, 1 = DOWN)
  *   H = Headlight (0 = OFF, 1 = ON)
  * - YYYY is the value for the command
- * 
+ *
  * Hardware Connections:
  * - GPIO 36: Steering joystick Y-axis (analog)
  * - GPIO 39: Throttle joystick X-axis (analog)
  * - GPIO 13: Metal detector button (digital, pull-up)
  * - GPIO 15: Headlight button (digital, pull-up)
  * - GPIO 2:  Status LED (on when connected)
- * 
+ *
  * Dependencies:
  * - BluetoothSerial library for ESP32
  */
@@ -45,7 +45,7 @@ BluetoothSerial SerialBT;
 
 // Replace with your SLAVE's MAC address - update from your slave's serial output
 // You'll need to update this with your actual slave ESP32 MAC address
-uint8_t slaveMAC[] = { 0x34, 0x5F, 0x45, 0xE7, 0x4C, 0x36 };
+uint8_t slaveMAC[] = { 0x34, 0x5F, 0x45, 0xE7, 0x6B, 0xEA };
 
 // Connection status LED
 #define STATUS_LED 2  // Built-in LED on most ESP32 dev boards
@@ -65,7 +65,7 @@ uint8_t slaveMAC[] = { 0x34, 0x5F, 0x45, 0xE7, 0x4C, 0x36 };
 #define CMD_HEADLIGHT 'H'
 
 // Button debounce variables
-const unsigned long debounceDelay = 50;  // 50ms debounce should be enough now
+const unsigned long debounceDelay = 50;
 
 // Variables for button state tracking
 bool metalDetectorReading = false;
@@ -171,7 +171,7 @@ void checkConnectionStatus() {
     if (isConnected) {
       // Just connected
       digitalWrite(STATUS_LED, HIGH);
-      Serial.println("? Connected to car!");
+      Serial.println("✅ Connected to car!");
       
       // Send initial state after connection
       delay(500); // Short delay to ensure connection is stable
@@ -187,7 +187,7 @@ void checkConnectionStatus() {
     } else {
       // Just disconnected
       digitalWrite(STATUS_LED, LOW);
-      Serial.println("? Disconnected from car. Will try to reconnect...");
+      Serial.println("❌ Disconnected from car. Will try to reconnect...");
       // Try to reconnect right away
       connectToSlave();
     }
@@ -223,11 +223,11 @@ void connectToSlave() {
   digitalWrite(STATUS_LED, LOW);
   
   if (SerialBT.connect(slaveMAC)) {
-    Serial.println("? Connection initiated!");
-    // Note: we don't set isConnected=true here anymore
+    Serial.println("✅ Connection initiated!");
+    // We don't set isConnected = true here anymore
     // We'll wait for checkConnectionStatus to confirm it
   } else {
-    Serial.println("? Connection failed. Will retry later...");
+    Serial.println("❌ Connection failed. Will retry later...");
   }
 }
 
@@ -247,11 +247,11 @@ void processJoysticks() {
   // Debug output - single line format for better readability
   // Print on EVERY loop for constant serial output
   char buffer[120];
-  sprintf(buffer, 
-          "CTRL | STR:%4d | THR:%4d | HDL:%s | MDT:%s", 
-          steeringValue, 
+  sprintf(buffer,
+          "CTRL | STR:%4d | THR:%4d | HDL:%s | MDT:%s",
+          steeringValue,
           throttleValue,
-          headlightState ? "ON " : "OFF", 
+          headlightState ? "ON " : "OFF",
           metalDetectorState ? "DOWN" : "UP  ");
   
   Serial.println(buffer);
@@ -259,7 +259,7 @@ void processJoysticks() {
 
 void checkButtons() {
   // ========== METAL DETECTOR BUTTON (GPIO13) ==========
-  // Still use press and release behavior for metal detector
+  // Press and release behavior for metal detector
   bool currentMetalDetectorReading = (digitalRead(METAL_DETECTOR_BUTTON) == LOW);
   
   // Check if reading has changed
@@ -279,7 +279,7 @@ void checkButtons() {
       String command = String(CMD_METAL_DETECTOR) + ":" + "1";
       SerialBT.println(command);
       Serial.println("Metal detector button pressed: DOWN");
-    } 
+    }
     else if (!metalDetectorReading && metalDetectorState) {
       // Button released
       metalDetectorState = false;
@@ -302,7 +302,7 @@ void checkButtons() {
   
   // If the reading has been stable for longer than the debounce delay
   if ((millis() - lastHeadlightChangeTime) > debounceDelay) {
-    // TOGGLE SWITCH BEHAVIOR: Only toggle state on button press (not release)
+    // Only toggle state on button press (not release)
     // Button is pressed down (LOW with pull-up)
     if (headlightReading && !headlightButtonPressed) {
       headlightButtonPressed = true;

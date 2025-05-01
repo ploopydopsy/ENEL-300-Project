@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=AVR_MAIN.c AVR_SECONDARY.c ESP32_MASTER.cpp ESP32_SLAVE.cpp
+SOURCEFILES_QUOTED_IF_SPACED=AVR_MAIN.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/AVR_MAIN.o ${OBJECTDIR}/AVR_SECONDARY.o ${OBJECTDIR}/ESP32_MASTER.o ${OBJECTDIR}/ESP32_SLAVE.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/AVR_MAIN.o.d ${OBJECTDIR}/AVR_SECONDARY.o.d ${OBJECTDIR}/ESP32_MASTER.o.d ${OBJECTDIR}/ESP32_SLAVE.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/AVR_MAIN.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/AVR_MAIN.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/AVR_MAIN.o ${OBJECTDIR}/AVR_SECONDARY.o ${OBJECTDIR}/ESP32_MASTER.o ${OBJECTDIR}/ESP32_SLAVE.o
+OBJECTFILES=${OBJECTDIR}/AVR_MAIN.o
 
 # Source Files
-SOURCEFILES=AVR_MAIN.c AVR_SECONDARY.c ESP32_MASTER.cpp ESP32_SLAVE.cpp
+SOURCEFILES=AVR_MAIN.c
 
 
 
@@ -94,24 +94,12 @@ ${OBJECTDIR}/AVR_MAIN.o: AVR_MAIN.c  .generated_files/flags/default/9c93e89b7323
 	@${RM} ${OBJECTDIR}/AVR_MAIN.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/AVR_MAIN.o.d" -MT "${OBJECTDIR}/AVR_MAIN.o.d" -MT ${OBJECTDIR}/AVR_MAIN.o -o ${OBJECTDIR}/AVR_MAIN.o AVR_MAIN.c 
 	
-${OBJECTDIR}/AVR_SECONDARY.o: AVR_SECONDARY.c  .generated_files/flags/default/58ecf2b0011119db9849e3d5ce90458de46d434d .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/AVR_SECONDARY.o.d 
-	@${RM} ${OBJECTDIR}/AVR_SECONDARY.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/AVR_SECONDARY.o.d" -MT "${OBJECTDIR}/AVR_SECONDARY.o.d" -MT ${OBJECTDIR}/AVR_SECONDARY.o -o ${OBJECTDIR}/AVR_SECONDARY.o AVR_SECONDARY.c 
-	
 else
 ${OBJECTDIR}/AVR_MAIN.o: AVR_MAIN.c  .generated_files/flags/default/f350aac3d6fc81d50f401e898841b6b69e5af495 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/AVR_MAIN.o.d 
 	@${RM} ${OBJECTDIR}/AVR_MAIN.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/AVR_MAIN.o.d" -MT "${OBJECTDIR}/AVR_MAIN.o.d" -MT ${OBJECTDIR}/AVR_MAIN.o -o ${OBJECTDIR}/AVR_MAIN.o AVR_MAIN.c 
-	
-${OBJECTDIR}/AVR_SECONDARY.o: AVR_SECONDARY.c  .generated_files/flags/default/cad253133556c0639f31ab0a8a6e73183453a461 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/AVR_SECONDARY.o.d 
-	@${RM} ${OBJECTDIR}/AVR_SECONDARY.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mconst-data-in-progmem -mconst-data-in-config-mapped-progmem     -MD -MP -MF "${OBJECTDIR}/AVR_SECONDARY.o.d" -MT "${OBJECTDIR}/AVR_SECONDARY.o.d" -MT ${OBJECTDIR}/AVR_SECONDARY.o -o ${OBJECTDIR}/AVR_SECONDARY.o AVR_SECONDARY.c 
 	
 endif
 

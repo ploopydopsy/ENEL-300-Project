@@ -3,37 +3,37 @@
  * Author: william adebiyi
  *
  * Created on April 20, 2025
- * 
+ *
  * Slave Controller for RC Car
  * ENEL 300 - Winter 2025
- * 
+ *
  * This module is the slave controller for the RC car project.
  * It runs on the ESP32 mounted on the car and acts as a bridge between
  * the Bluetooth communication and the two AVR microcontrollers.
- * 
+ *
  * Main responsibilities:
  * - Receiving commands from the master controller via Bluetooth
  * - Converting and forwarding commands to appropriate AVR pins
  * - Maintaining safe states when connection is lost
  * - Providing status information in serial monitor
- * 
+ *
  * Outputs to AVRs:
  * DAC outputs (0-3.3V):
  * - GPIO 25: Steering control to Main AVR (PD2)
  * - GPIO 26: Motor control to Main AVR (PD3)
- * 
+ *
  * Digital outputs (HIGH/LOW):
  * - GPIO 27: Headlight toggle to Main AVR (PD5)
  * - GPIO 33: Metal detector arm toggle to Secondary AVR (PD2)
- * 
+ *
  * Status indicators:
  * - GPIO 15: Status LED (HIGH when connected, blinking when disconnected)
- * 
+ *
  * Communication Protocol:
  * Receives commands in format "X:YYYY" where:
  * - X is command type (S=Steering, T=Throttle, M=Metal Detector, H=Headlight)
  * - YYYY is the value for that command
- * 
+ *
  * Dependencies:
  * - BluetoothSerial library for ESP32
  * - esp_bt_device.h for obtaining device MAC address
@@ -127,10 +127,10 @@ void loop() {
   if (SerialBT.connected() != isConnected) {
     isConnected = SerialBT.connected();
     if (isConnected) {
-      Serial.println("? Controller connected!");
+      Serial.println("✅ Controller connected!");
       digitalWrite(STATUS_LED, HIGH); // LED on when connected
     } else {
-      Serial.println("? Controller disconnected");
+      Serial.println("❌ Controller disconnected");
       digitalWrite(STATUS_LED, LOW); // LED off when disconnected
       
       // Reset car to safe state when disconnected
@@ -175,11 +175,11 @@ void printStatusReport() {
   // Continuously output status in a clean format
   char buffer[120];
   
-  sprintf(buffer, 
-          "CAR | STR:%3d | THR:%3d | MDT:%s | HDL:%s", 
-          currentSteeringValue, 
-          currentThrottleValue, 
-          metalDetectorState ? "DOWN" : "UP  ", 
+  sprintf(buffer,
+          "CAR | STR:%3d | THR:%3d | MDT:%s | HDL:%s",
+          currentSteeringValue,
+          currentThrottleValue,
+          metalDetectorState ? "DOWN" : "UP  ",
           headlightState ? "ON " : "OFF");
   
   Serial.println(buffer);
@@ -236,17 +236,17 @@ void processSteeringCommand(String value) {
   // Apply deadzone around center
   if (abs(rawSteeringValue - JOYSTICK_STEERING_CENTER) < JOYSTICK_DEADZONE) {
     servoValue = 127; // Center position
-  } 
+  }
   // Map left half of joystick range
   else if (rawSteeringValue < JOYSTICK_STEERING_CENTER) {
-    servoValue = map(rawSteeringValue, 
-                    0, JOYSTICK_STEERING_CENTER - JOYSTICK_DEADZONE, 
+    servoValue = map(rawSteeringValue,
+                    0, JOYSTICK_STEERING_CENTER - JOYSTICK_DEADZONE,
                     0, 127);
-  } 
+  }
   // Map right half of joystick range
   else {
-    servoValue = map(rawSteeringValue, 
-                    JOYSTICK_STEERING_CENTER + JOYSTICK_DEADZONE, 4095, 
+    servoValue = map(rawSteeringValue,
+                    JOYSTICK_STEERING_CENTER + JOYSTICK_DEADZONE, 4095,
                     127, 255);
   }
   
@@ -274,14 +274,14 @@ void processThrottleCommand(String value) {
   }
   // Map bottom half of joystick range (reverse)
   else if (rawThrottleValue < JOYSTICK_THROTTLE_CENTER) {
-    motorValue = map(rawThrottleValue, 
-                   0, JOYSTICK_THROTTLE_CENTER - JOYSTICK_DEADZONE, 
+    motorValue = map(rawThrottleValue,
+                   0, JOYSTICK_THROTTLE_CENTER - JOYSTICK_DEADZONE,
                    0, 127);
   }
   // Map top half of joystick range (forward)
   else {
-    motorValue = map(rawThrottleValue, 
-                   JOYSTICK_THROTTLE_CENTER + JOYSTICK_DEADZONE, 4095, 
+    motorValue = map(rawThrottleValue,
+                   JOYSTICK_THROTTLE_CENTER + JOYSTICK_DEADZONE, 4095,
                    127, 255);
   }
   

@@ -470,15 +470,15 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x44f0
+.debug_info     0x0000000000000000     0x44f4
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000     0x272b /Applications/microchip/mplabx/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
- .debug_info    0x000000000000272b     0x1dc5 build/default/production/AVR_MAIN.o
+ .debug_info    0x000000000000272b     0x1dc9 build/default/production/AVR_MAIN.o
 
-.debug_abbrev   0x0000000000000000     0x2848
+.debug_abbrev   0x0000000000000000     0x2857
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000     0x2518 /Applications/microchip/mplabx/v6.20/packs/Microchip/AVR-Dx_DFP/2.4.286/xc8/avr/lib/avrxmega4/memx-const/mapped/crtavr128db28.o
- .debug_abbrev  0x0000000000002518      0x330 build/default/production/AVR_MAIN.o
+ .debug_abbrev  0x0000000000002518      0x33f build/default/production/AVR_MAIN.o
 
 .debug_line     0x0000000000000000      0x630
  *(.debug_line .debug_line.* .debug_line_end)
