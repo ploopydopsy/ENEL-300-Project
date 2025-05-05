@@ -306,7 +306,7 @@ uint16_t filter_distance(uint16_t new_distance) {
     }
     
     // Use a faster filter - weighted average favoring new readings
-    // This responds faster than median while still smoothing
+    // Responds faster than median while still smoothing
     static uint16_t filtered_distance = 0;
     
     if (filtered_distance == 0 && new_distance > 0) {

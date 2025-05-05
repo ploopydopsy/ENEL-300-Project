@@ -73,9 +73,9 @@
 // 62.5kHz ? 1 tick ? 16?s ? 1.5ms pulse ? 94 ticks
 
 #define SERVO_CENTER 94       // Neutral/center position (1.5ms pulse) [usually 94]
-#define SERVO_MIN    19       // Full left (~0.3ms pulse) [19?30 depending on servo range]
-#define SERVO_MAX    200      // Full right (~2.7ms pulse) [180?200 if your servo allows it]
-#define SERVO_DEADBAND 5      // How much joystick wiggle is ignored near center [3?10] 
+#define SERVO_MIN    19       // Full left (~0.3ms pulse) [19-30 depending on servo]
+#define SERVO_MAX    200      // Full right (~2.7ms pulse) [180-200 depending on servo]
+#define SERVO_DEADBAND 5      // How much joystick wiggle is ignored near center [3 to 10] 
 
 
 // Auto-calculated ranges for mapping
@@ -85,7 +85,7 @@
 
 //===================== MOTOR CONTROL (THROTTLE) =====================//
 
-#define THROTTLE_IDLE 80       // Joystick value (0?255) that represents "stop" [75?85]
+#define THROTTLE_IDLE 80       // Joystick value (0-255) that represents "stop" [75-85]
 #define THROTTLE_DEADBAND 10   // +/- range around idle considered "stopped" [10?20]
 
   // Increase THROTTLE_DEADBAND if motor jitters when idle.
@@ -208,7 +208,7 @@ void init_adc(void) {
 void init_pwm_tca0(void) {
     // Configure TCA0 for PWM generation on PA0 (servo) and PA1 (motor)
     
-    // Route TCA0 outputs to PORTA (this is the default, but we're explicit)
+    // Route TCA0 outputs to PORTA 
     PORTMUX.TCAROUTEA = PORTMUX_TCA0_PORTA_gc;
     
     // For a 50Hz PWM with 4MHz clock and DIV64 prescaler:
